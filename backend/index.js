@@ -7,7 +7,7 @@ const mongodb = require("./db")
 mongodb();
 const cors = require("cors")
 app.use(cors({
-    origin:'http://localhost:3000'
+    origin:'https://health-careapp.vercel.app/'
   }));
 
 app.use(express.json());
