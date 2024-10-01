@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/api/',require("./routes/CreatePatient"));
 app.use('/api/',require("./routes/Displaydata"));
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.json('Hello World!')
 })
 
 app.listen(port, () => {
