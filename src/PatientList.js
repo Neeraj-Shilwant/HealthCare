@@ -5,13 +5,13 @@ function PatientList() {
   const [patients, setPatients] = useState([]);
 
   useEffect(() => {
-    axios.post('http://localhost:5000/api/patient_data')
+    axios.post('https://health-careapi.vercel.app/api/patient_data')
       .then(res => setPatients(res.data))
       .catch(err => console.error(err));
   }, []);
 
   const downloadPDF = (id) => {
-    window.open(`http://localhost:5000/api/patients/${id}/pdf`);
+    window.open(`https://health-careapi.vercel.app/api/patients/${id}/pdf`);
   };
 
   return (
