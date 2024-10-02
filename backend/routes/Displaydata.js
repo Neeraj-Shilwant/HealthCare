@@ -5,13 +5,14 @@ const PDFDocument = require('pdfkit');
 
 //get all patients data
 router.post('/patient_data',async (req,res)=>{
-    try {
-        console.log(global.patientdata);
-        res.send(global.patientdata);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send("Server Error");
-    }
+  try {
+    const patients = await Patient.find(); // Fetch data from MongoDB
+    
+    res.json(patients);
+} catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+}
 })
 
 // Get patient by ID

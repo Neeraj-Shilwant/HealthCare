@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express()
 const port = 5000
-const mongodb = require("./db")
+const mongoconnect = require("./mongoconnect")
 
 
-mongodb();
+// Connect to MongoDB Atlas
+mongoconnect();
+
 const cors = require("cors")
 app.use(cors({
     origin:'http://localhost:3000'
