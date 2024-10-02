@@ -9,7 +9,7 @@ mongoconnect();
 
 const cors = require("cors")
 app.use(cors({
-    origin:'https://health-careapp.vercel.app/'
+    origin:'https://health-careapp.vercel.app'
   }));
 
 app.use(express.json());
