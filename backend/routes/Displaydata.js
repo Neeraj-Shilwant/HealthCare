@@ -6,7 +6,7 @@ const PDFDocument = require('pdfkit');
 //get all patients data
 router.post('/patient_data',async (req,res)=>{
     try {
-        
+        console.log(global.patientdata);
         res.send(global.patientdata);
     } catch (err) {
         console.error(err.message);
